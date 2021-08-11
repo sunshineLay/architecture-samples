@@ -1,7 +1,6 @@
 buildscript {
     repositories {
-        google()
-        jcenter()
+        maven { url 'http://127.0.0.1:8081/artifactory/android_group/' }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:3.3.0"
@@ -14,8 +13,7 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        jcenter()
+        maven { url 'http://127.0.0.1:8081/artifactory/android_group/' }
     }
 }
 

@@ -80,3 +80,4 @@ interface TasksContract {
         fun clearCompletedTasks()
     }
 }
+

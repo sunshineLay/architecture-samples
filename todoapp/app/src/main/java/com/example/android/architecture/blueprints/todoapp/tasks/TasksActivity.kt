@@ -17,6 +17,7 @@ package com.example.android.architecture.blueprints.todoapp.tasks
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.AppCompatActivity
@@ -38,6 +39,9 @@ class TasksActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
 
     private lateinit var tasksPresenter: TasksPresenter
+
+    private val TAG = "TasksActivity"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -81,6 +85,7 @@ class TasksActivity : AppCompatActivity() {
         if (item.itemId == android.R.id.home) {
             // Open the navigation drawer when the home icon is selected from the toolbar.
             drawerLayout.openDrawer(GravityCompat.START)
+            Log.e(TAG, "onOptionsItemSelected: setHomeAsUpIndicator(R.drawable.ic_menu)方法可以替换为home按钮")
             return true
         }
         return super.onOptionsItemSelected(item)
