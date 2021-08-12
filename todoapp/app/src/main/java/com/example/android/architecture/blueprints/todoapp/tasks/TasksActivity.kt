@@ -19,6 +19,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -86,6 +87,7 @@ class TasksActivity : AppCompatActivity() {
             // Open the navigation drawer when the home icon is selected from the toolbar.
             drawerLayout.openDrawer(GravityCompat.START)
             Log.e(TAG, "onOptionsItemSelected: setHomeAsUpIndicator(R.drawable.ic_menu)方法可以替换为home按钮")
+            Toast.makeText(this,"替换home",Toast.LENGTH_SHORT).show()
             return true
         }
         return super.onOptionsItemSelected(item)
